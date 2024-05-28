@@ -116,14 +116,18 @@ const CarouselComponent : React.FC<CarouselProps> = (carouselProps) => {
                 }
             </div>
             <div className="carouselContainer__navigationContainer">
-                <button className="carouselContainer__navButton --previousBtn" onClick={onPreviousImage}>
-                    {/*<i className=" fa-solid fa-chevron-left"></i>*/}
-                    <img src={leftArrow} alt="Image précédente"/>
-                </button>
-                <button className="carouselContainer__navButton --nextBtn" onClick={onNextImage}>
-                    <img src={rightArrow} alt="Image suivante"/>
-                    {/*<i className="fa-solid fa-chevron-right"></i>*/}
-                </button>
+                {
+                    countImages > 1
+                        ? <>
+                            <button className="carouselContainer__navButton --previousBtn" onClick={onPreviousImage}>
+                                <img src={leftArrow} alt="Image précédente"/>
+                            </button>
+                            <button className="carouselContainer__navButton --nextBtn" onClick={onNextImage}>
+                                <img src={rightArrow} alt="Image suivante"/>
+                            </button>
+                        </>
+                        : <></>
+                }
             </div>
             <figcaption className="carouselContainer__Caption">
                 <span>{caption}</span>

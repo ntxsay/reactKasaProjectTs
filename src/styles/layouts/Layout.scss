@@ -32,13 +32,13 @@ header {
       flex-direction: row;
       gap: 57px;
 
-      a {
+      .link-item {
         @include monserratFontElement($color:black, $weight:500);
         text-decoration: none;
-      }
-
-      a.selected {
-        text-decoration: underline;
+        
+        &.selected {
+          text-decoration: underline;
+        }
       }
     }
   }

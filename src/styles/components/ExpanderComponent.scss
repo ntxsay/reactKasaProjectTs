@@ -1,7 +1,7 @@
 ﻿@import "src/styles/layouts/theme";
 
 // Conteneur de l'expander
-.expander {
+.expanderContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,41 +15,55 @@
     justify-content: start;
     background: $main-primary-red-color;
     padding: 10px 20px 10px 10px;
-    cursor: pointer;
-    border: none;
+    margin: 0;
     border-radius: 5px;
 
     //Titre de l'en-tête
-    .expander__header__title {
+    .expanderContainer__header__title {
       @include monserratFontElement($size: 18px);
       text-align: start;
     }
 
     //icone de l'expander
-    .expander__header__glyph {
-      @include monserratFontElement($size: 18px);
-      transition: transform 0.3s ease-in-out;
+    .expanderContainer__header__glyph {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      img {
+        width: 24px;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      &.dellapse {
+        img {
+          transform: rotate(180deg);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
     }
 
-    .expander__header__glyph.dellapse {
-      transform: rotate(180deg);
-      transition: transform 0.3s ease-in-out;
-    }
   }
 
   //Conteneur du contenu de l'expander
-  .expander__content {
+  .expanderContainer__content {
     background: #F6F6F673;
-    padding: 13px 20px 19px 20px;
+    padding: 0;
     opacity: 0;
     height: 0;
     overflow: hidden;
     transition: opacity 0.5s ease, height 0.5s ease;
-  }
+    @include monserratFontElement($size: 18px, $weight: 400, $color:$main-primary-black-color);
 
-  .expander__content.dellapse {
-    opacity: 1;
-    height: auto;
-    transition: opacity 0.5s ease, height 0.5s ease;
+    &.dellapse {
+      opacity: 1;
+      padding: 13px 20px 19px 20px;
+      height: auto;
+      transition: opacity 0.5s ease, height 0.5s ease;
+    }
   }
 }

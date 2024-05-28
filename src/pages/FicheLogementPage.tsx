@@ -3,9 +3,10 @@ import '../styles/pages/FicheLogementPage.scss'
 import CarouselComponent, {ICarouselItem} from "../components/CarouselComponent.tsx";
 import TagComponent from "../components/TagComponent.tsx";
 import RatingComponent from "../components/RatingComponent.tsx";
+import ExpanderComponent from "../components/ExpanderComponent.tsx";
 
 const FicheLogementPage = () => {
-    let countTag = 0;
+    let countTag = 0, countEquipment = 0;
     const location = useLocation();
     const parentProp: IPropLogement  = location.state;
     const carouselItems : ICarouselItem[] = [];
@@ -40,6 +41,19 @@ const FicheLogementPage = () => {
                     }
                 </div>
                 <RatingComponent componentId="logementRating" rating={Number.parseInt(parentProp.logement.rating)} />
+            </div>
+            <div className="logement-description-equipements-container">
+                <ExpanderComponent header="Description" content={<p>{parentProp.logement.description}</p>} isCollapsed={true} />
+                <ExpanderComponent header="Équipements" content={
+                    <ul className="logement-description-equipements-list">
+                        {
+                            parentProp.logement.equipments.map(equipment => {
+                                countEquipment++;
+                                return <li key={countEquipment}>{equipment}</li>
+                            })
+                        }
+                    </ul>
+                } isCollapsed={true} />
             </div>
         </section>
     )

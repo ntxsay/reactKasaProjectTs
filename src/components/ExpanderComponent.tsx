@@ -1,9 +1,10 @@
 ﻿import React, {useState} from "react";
 import '../styles/components/ExpanderComponent.scss'
+import chevronUp from '../assets/chevron-up.svg';
 
 interface ExpanderProps {
     header: React.ReactElement | string,
-    content: React.ReactElement,
+    content: React.ReactElement | string,
     isCollapsed: boolean
 }
 
@@ -16,12 +17,14 @@ const ExpanderComponent: React.FC<ExpanderProps> =  (props) => {
     };
 
     return (
-        <article className="expander">
-            <button className="expander__header" onClick={toggleCollapse}>
-                <span className="expander__header__title">{props.header}</span>
-                <i className={`fa-solid fa-chevron-up expander__header__glyph ${isCollapsed ? '' : 'dellapse'}`}></i>
-            </button>
-            <div className={`expander__content ${isCollapsed ? '' : 'dellapse'}`}>{props.content}</div>
+        <article className="expanderContainer">
+            <header className="expander__header" onClick={toggleCollapse}>
+                <span className="expanderContainer__header__title">{props.header}</span>
+                <button className={`expanderContainer__header__glyph ${isCollapsed ? '' : 'dellapse'}`}>
+                    <img src={chevronUp} />
+                </button>
+            </header>
+            <div className={`expanderContainer__content ${isCollapsed ? '' : 'dellapse'}`}>{props.content}</div>
         </article>
     );
 };
