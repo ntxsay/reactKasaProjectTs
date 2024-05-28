@@ -2,6 +2,12 @@
 
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 1440px;
 }
 
 header {

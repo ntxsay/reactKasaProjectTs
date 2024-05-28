@@ -9,7 +9,7 @@ const HomePage = () => {
             <section id="gallery">
                 {jsonLogements && jsonLogements.map((logement) => {
                     return (
-                        <Link to="/fiche-logement"  state={{logement: logement }} key={logement.id}>
+                        <Link to="/fiche-logement" state={{logement: logement }} key={logement.id}>
                             <ThumbComponent key={logement.id} logement={logement}></ThumbComponent>
                         </Link>
                     )

@@ -7,11 +7,12 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   row-gap: 50px;
+  column-gap: 60px;
 
   a {
-    width: 31%;
-    aspect-ratio: 1 / 1;
+    height: 340px;
+    width: 340px;
   }
 }
