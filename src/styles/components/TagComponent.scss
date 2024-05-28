@@ -1,0 +1,16 @@
+﻿@import "src/styles/layouts/theme";
+
+.tagContainer {
+  height: 25px;
+  //width: 115px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $main-primary-red-color;
+  border-radius: 10px;
+  padding: 0 12px;
+  
+  .tagContainer__title {
+    @include monserratFontElement($size:14px, $weight:700, $color: $main-primary-white-color);
+  }
+}

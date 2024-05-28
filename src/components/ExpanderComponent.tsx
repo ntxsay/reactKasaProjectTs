@@ -6,10 +6,8 @@ interface ExpanderProps {
     content: React.ReactElement,
     isCollapsed: boolean
 }
-/**
- * Représente un expander avec deux états ouvert et fermé
- * @returns {Element}
- */
+
+
 const ExpanderComponent: React.FC<ExpanderProps> =  (props) => {
 
     const [isCollapsed, setIsCollapsed] = useState(props.isCollapsed);

@@ -1,0 +1,20 @@
+﻿@import "src/styles/layouts/theme";
+
+.ratingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 19px;
+  align-items: center;
+  
+  .ratingContainer__star {
+    background: transparent;
+    border: none;
+    padding: 0;
+    
+    img {
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
