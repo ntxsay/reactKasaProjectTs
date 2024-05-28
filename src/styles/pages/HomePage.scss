@@ -1,0 +1,17 @@
+﻿@import "src/styles/layouts/theme";
+
+#gallery {
+  background: $main-primary-gray-color;
+  border-radius: 25px;
+  padding: 56px 50px 43px 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 50px;
+
+  a {
+    width: 31%;
+    aspect-ratio: 1 / 1;
+  }
+}

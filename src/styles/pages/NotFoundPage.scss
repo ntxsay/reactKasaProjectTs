@@ -1,0 +1,24 @@
+﻿@import "../../styles/layouts/theme";
+
+#notFoundPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 139px;
+  padding: 94px 0 139px 0;
+
+  .page__error-code {
+    @include monserratFontElement($size: 18em, $color: $main-primary-red-color);
+    margin: 0;
+  }
+
+  .page__message {
+    @include monserratFontElement($size: 2.3em, $color: $main-primary-red-color, $weight:500);
+    margin: 0;
+  }
+
+  .page__return-link {
+    @include monserratFontElement($size: 18px, $color: $main-primary-black-color, $weight:500);
+  }
+}

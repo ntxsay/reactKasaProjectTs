@@ -1,0 +1,13 @@
+﻿$main-primary-red-color: #FF6060;
+$main-primary-white-color: white;
+$main-primary-black-color: black;
+$main-primary-gray-45-color: #F6F6F673;
+$main-primary-gray-color: #F6F6F6;
+$main-primary-font-family: Montserrat, 'sans-serif';
+
+@mixin monserratFontElement($size: 1.5em, $weight: 700, $color: $main-primary-white-color) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  font-family: $main-primary-font-family;
+}
