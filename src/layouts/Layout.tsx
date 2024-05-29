@@ -14,7 +14,7 @@ const Layout = () => {
                 <nav className="header__navigation">
                     <ul>
                         <li><a href="/" className={`link-item ${path === "/" ? 'selected' : ''}`}>Accueil</a></li>
-                        <li><a href="/" className={`link-item ${path === "/about" ? 'selected' : ''}`}>A Propos</a></li>
+                        <li><a href="/about" className={`link-item ${path === "/about" ? 'selected' : ''}`}>A Propos</a></li>
                     </ul>
                 </nav>
             </header>

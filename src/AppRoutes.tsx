@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
 import Layout from "./layouts/Layout.tsx";
 import FicheLogementPage from "./pages/FicheLogementPage.tsx";
+import AboutPage from "./pages/AboutPage.tsx";
 
 const AppRoutes = () => {
     return (
@@ -10,6 +11,7 @@ const AppRoutes = () => {
             <Route path="/" element={<Layout/>}>
                 <Route index element={<HomePage/>}/>
                 <Route path="/fiche-logement" element={<FicheLogementPage/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
                 <Route path="*" element={<NotFoundPage/>}/>
             </Route>
         </Routes>
