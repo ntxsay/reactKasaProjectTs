@@ -1,5 +1,6 @@
 ﻿@import "theme";
 
+
 body {
   margin: 0;
   display: flex;
@@ -7,7 +8,10 @@ body {
 }
 
 #root {
-  width: 1440px;
+  max-width: 1440px;
+  @media (max-width: $mobile-size-layout){
+    max-width: 375px;
+  }
 }
 
 header {
@@ -17,9 +21,17 @@ header {
   gap: 20px;
   margin: 45px 100px;
 
+  @media (max-width: $mobile-size-layout){
+    margin: 20px 20px;
+  }
+
   // Image du logo d'en-tête
   .header__logo {
     height: 68px;
+
+    @media (max-width: $mobile-size-layout){
+      height: 47px;
+    }
   }
 
   .header__navigation {
@@ -32,9 +44,18 @@ header {
       flex-direction: row;
       gap: 57px;
 
+      @media (max-width: $mobile-size-layout){
+        gap: 26px;
+      }
+
       .link-item {
         @include monserratFontElement($color:black, $weight:500);
         text-decoration: none;
+
+        @media (max-width: $mobile-size-layout){
+          @include monserratFontElement($color:black, $weight:500, $size:12px);
+          text-transform: uppercase;
+        }
         
         &.selected {
           text-decoration: underline;
@@ -45,7 +66,11 @@ header {
 }
 
 main {
-  padding: 0 100px;
+  padding: 0 100px 50px 100px;
+
+  @media (max-width: $mobile-size-layout){
+    padding: 0 20px 27px 20px;
+  }
 }
 
 footer {
@@ -53,17 +78,30 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 28px;
+  gap: 55px;
   padding: 66px 0 29px 0;
 
+  @media (max-width: $mobile-size-layout){
+    gap: 14px;
+  }
+  
   .footer__logo {
     height: 39px;
-    margin-top: 66px;
   }
+  
+  .footer__copyright__container {
+    display: flex;
+    justify-content: center;
 
-  .footer__copyright {
-    @include monserratFontElement($weight:500);
-    text-align: center;
-    margin-bottom: 0;
+    .footer__copyright {
+      @include monserratFontElement($weight:500);
+      text-align: center;
+      margin: 0;
+
+      @media (max-width: $mobile-size-layout){
+        @include monserratFontElement($weight:500, $size:12px);
+        width: 103px;
+      }
+    }
   }
 }

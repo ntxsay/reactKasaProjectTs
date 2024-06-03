@@ -8,7 +8,7 @@ const HomePage = () => {
     const jsonLogements : ILogement[] = jsonData;
     return (
         <section className="page">
-            <BannerComponent caption={"Chez vous, partout et ailleurs"} imageUrl={imageSource} />
+            <BannerComponent caption={<><span>Chez vous, </span><span>partout et ailleurs</span></>} imageUrl={imageSource} />
             <section id="gallery">
                 {jsonLogements && jsonLogements.map((logement) => {
                     return (

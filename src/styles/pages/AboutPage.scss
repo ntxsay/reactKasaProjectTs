@@ -1,11 +1,21 @@
-﻿
+﻿@import "src/styles/layouts/theme";
+
 .about-expanders-container {
   margin: 43px 108px 38px 108px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media (max-width: $mobile-size-layout){
+    margin: 19px 0 0 0;
+    gap: 20px;
+  }
   
   .expanderContainer__header__title {
     font-size: 24px !important;
+
+    @media (max-width: $mobile-size-layout){
+      font-size: 13px !important;
+    }
   }
 }

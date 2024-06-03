@@ -3,7 +3,7 @@ import React from "react";
 
 interface IBannerProps {
     imageUrl: string,
-    caption: string | null
+    caption: string | null | React.ReactElement
 }
 
 const BannerComponent : React.FC<IBannerProps> = (props) => {

@@ -12,5 +12,9 @@
   
   .tagContainer__title {
     @include monserratFontElement($size:14px, $weight:700, $color: $main-primary-white-color);
+
+    @media (max-width: $mobile-size-layout){
+      @include monserratFontElement($size:10px, $weight:700, $color: $main-primary-white-color);
+    }
   }
 }

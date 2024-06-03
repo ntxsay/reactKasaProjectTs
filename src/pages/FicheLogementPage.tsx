@@ -21,26 +21,26 @@ const FicheLogementPage = () => {
     return (
         <section className="page">
             <CarouselComponent carouselId="item-carousel" items={carouselItems} selectedIndex={0} isReversible={true}/>
-            <div className="logement-title-host-container">
-                <div className="logement-title-container">
+            <div className="logement__data-grid__container">
+                <div className="logement__title-location-tags__container">
                     <h1 className="logement-title">{parentProp.logement.title}</h1>
                     <h2 className="logement-location">{parentProp.logement.location}</h2>
+                    <div className="logement-tags-container">
+                        {
+                            parentProp.logement.tags.map( tag => {
+                                countTag++;
+                                return <TagComponent title={tag} key={countTag}/>
+                            })
+                        }
+                    </div>
                 </div>
-                <div className="logement-host-container">
-                    <span className="logement-host-name">{parentProp.logement.host.name}</span>
-                    <img className="logement-host-picture" src={parentProp.logement.host.picture} alt="Photo de l'hôte"/>
+                <div className="logement__host-rating__container">
+                    <div className="logement-host-container">
+                        <span className="logement-host-name">{parentProp.logement.host.name}</span>
+                        <img className="logement-host-picture" src={parentProp.logement.host.picture} alt="Photo de l'hôte"/>
+                    </div>
+                    <RatingComponent componentId="logementRating" rating={Number.parseInt(parentProp.logement.rating)} />
                 </div>
-            </div>
-            <div className="logement-tags-rating-container">
-                <div className="logement-tags-container">
-                    {
-                        parentProp.logement.tags.map( tag => {
-                            countTag++;
-                            return <TagComponent title={tag} key={countTag}/>
-                        })
-                    }
-                </div>
-                <RatingComponent componentId="logementRating" rating={Number.parseInt(parentProp.logement.rating)} />
             </div>
             <div className="logement-description-equipements-container">
                 <ExpanderComponent header="Description" content={<p>{parentProp.logement.description}</p>} isCollapsed={true} />

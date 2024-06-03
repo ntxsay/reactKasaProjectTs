@@ -6,6 +6,11 @@
   margin: 0;
   overflow: hidden;
 
+  @media (max-width: $mobile-size-layout){
+    border-radius: 10px;
+    height: 255px;
+  }
+
   .carouselContainer__imageContainer {
     position: absolute;
     display: flex;
@@ -44,14 +49,26 @@
       
       &.--previousBtn {
         margin-left: 23px;
+
+        @media (max-width: $mobile-size-layout){
+          margin-left: 5px;
+        }
       }
 
       &.--nextBtn {
         margin-right: 23px;
+
+        @media (max-width: $mobile-size-layout){
+          margin-right: 5px;
+        }
       }
       
       img {
         height: 79px;
+
+        @media (max-width: $mobile-size-layout){
+          height: 19px;
+        }
       }
     }
   }

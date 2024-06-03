@@ -12,8 +12,21 @@
   column-gap: 60px;
   margin-top: 43px;
 
+  @media (max-width: $mobile-size-layout){
+    background: transparent;
+    padding: 0;
+    flex-direction: column;
+    margin-top: 22px;
+    row-gap: 20px;
+  }
+
   a {
     height: 340px;
     width: 340px;
+
+    @media (max-width: $mobile-size-layout){
+      height: 255px;
+      width: 335px;
+    }
   }
 }

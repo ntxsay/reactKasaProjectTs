@@ -23,7 +23,9 @@ const Layout = () => {
             </main>
             <footer>
                 <img className="footer__logo" src={kasaWhiteLogo} alt="Logo de Kasa"/>
-                <p className="footer__copyright">© 2020 Kasa. All rights reserved</p>
+                <div className="footer__copyright__container">
+                    <p className="footer__copyright">© 2020 Kasa. All rights reserved</p>
+                </div>
             </footer>
         </>
     );
