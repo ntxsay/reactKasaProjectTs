@@ -1,5 +1,4 @@
-﻿import '../styles/components/CarouselComponent.scss'
-import React, {useEffect, useState} from "react";
+﻿import React, {useEffect, useState} from "react";
 import leftArrow from '../assets/left-arrow.svg';
 import rightArrow from '../assets/right-arrow.svg'
 

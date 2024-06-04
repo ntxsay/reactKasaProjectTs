@@ -1,4 +1,4 @@
-﻿import '../styles/pages/NotFoundPage.scss'
+﻿import {Link} from "react-router-dom";
 
 
 const NotFoundPage = () =>{
@@ -7,7 +7,7 @@ const NotFoundPage = () =>{
         <section id="notFoundPage" className="page">
             <p className="page__error-code">404</p>
             <p className="page__message"><span>Oups! La page que </span><span>vous demandez n'existe pas.</span></p>
-            <a href="/" className="page__return-link">Retourner sur la page d’accueil</a>
+            <Link to="/" className="page__return-link">Retourner sur la page d’accueil</Link>
         </section>
     );
 }

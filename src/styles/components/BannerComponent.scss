@@ -1,6 +1,4 @@
-﻿@import "src/styles/layouts/theme";
-
-.bannerContainer {
+﻿.bannerContainer {
   border-radius: 25px;
   background: $main-primary-gray-color;
   position: relative;
@@ -44,7 +42,7 @@
     height: 100%;
     width: 100%;
 
-    @media (max-width: $mobile-size-layout){
+    @media (max-width: $layout-size-880px){
       justify-content: flex-start;
     }
     
@@ -69,6 +67,20 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        gap: 4px;
+      }
+
+      @media (max-width: $layout-size-640px){
+        font-size: 36px !important;
+      }
+
+      @media (max-width: $layout-size-880px){
+        @include monserratFontElement($size: 48px);
+        margin-left: 16px;
+        text-shadow: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start !important;
         gap: 4px;
       }
     }

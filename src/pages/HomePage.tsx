@@ -1,5 +1,4 @@
 ﻿import jsonData from '../data/logements.json'
-import '../styles/pages/HomePage.scss'
 import {Link} from "react-router-dom";
 import imageSource from '../assets/Image-source-1.png';
 import ThumbComponent from "../components/ThumbComponent.tsx";

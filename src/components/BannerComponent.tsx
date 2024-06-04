@@ -1,5 +1,4 @@
-﻿import '../styles/components/BannerComponent.scss'
-import React from "react";
+﻿import React from "react";
 
 interface IBannerProps {
     imageUrl: string,

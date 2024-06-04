@@ -1,5 +1,4 @@
 ﻿import {useLocation} from "react-router-dom";
-import '../styles/pages/FicheLogementPage.scss'
 import CarouselComponent, {ICarouselItem} from "../components/CarouselComponent.tsx";
 import TagComponent from "../components/TagComponent.tsx";
 import RatingComponent from "../components/RatingComponent.tsx";

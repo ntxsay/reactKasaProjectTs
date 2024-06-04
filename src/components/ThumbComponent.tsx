@@ -1,5 +1,4 @@
-﻿import '../styles/components/ThumbComponent.scss'
-import React from "react";
+﻿import React from "react";
 
 /**
  * Retourne un composant Thumbnail

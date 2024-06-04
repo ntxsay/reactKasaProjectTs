@@ -1,5 +1,4 @@
 ﻿import React, {useState} from "react";
-import '../styles/components/ExpanderComponent.scss'
 import chevronUp from '../assets/chevron-up.svg';
 
 interface ExpanderProps {

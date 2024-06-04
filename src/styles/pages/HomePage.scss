@@ -1,4 +1,10 @@
-﻿@import "src/styles/layouts/theme";
+﻿main {
+  margin-bottom: 50px;
+
+  @media (max-width: $mobile-size-layout){
+  margin-bottom: 27px;
+  }
+}
 
 #gallery {
   background: $main-primary-gray-color;
@@ -9,7 +15,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   row-gap: 50px;
-  column-gap: 60px;
+  column-gap: 5%;
   margin-top: 43px;
 
   @media (max-width: $mobile-size-layout){
@@ -20,13 +26,26 @@
     row-gap: 20px;
   }
 
-  a {
-    height: 340px;
-    width: 340px;
+  @media (max-width: $layout-size-575px){
+    flex-direction: column;
+  }
 
-    @media (max-width: $mobile-size-layout){
-      height: 255px;
-      width: 335px;
+  @media (max-width: $layout-size-1024px){
+    padding: 56px 25px 43px 25px;
+  }
+
+  @media (max-width: $layout-size-960px) {
+    row-gap: 23px;
+  }
+
+  a {
+    width: 30%;
+    aspect-ratio: 1/1;
+    
+    @media (max-width: $layout-size-575px){
+      width: 100%;
+      aspect-ratio: 4/3;
+
     }
   }
 }

@@ -1,4 +1,10 @@
-﻿@import "src/styles/layouts/theme";
+﻿main {
+  margin-bottom: 50px;
+
+  @media (max-width: $mobile-size-layout){
+    margin-bottom: 27px;
+  }
+}
 
 .logement__data-grid__container {
   display: grid;

@@ -1,7 +1,6 @@
 ﻿import kasaWhiteLogo from '../assets/logo-white.svg';
 import kasaColorLogo from  '../assets/logo-red.svg'
-import {Outlet, useLocation} from 'react-router-dom';
-import '../styles/layouts/Layout.scss'
+import {Outlet, useLocation, Link} from 'react-router-dom';
 
 const Layout = () => {
     const location = useLocation();
@@ -9,18 +8,22 @@ const Layout = () => {
     
     return (
         <>
-            <header>
-                <img className="header__logo" src={kasaColorLogo} alt="Logo d'en-tête de Kasa"/>
-                <nav className="header__navigation">
-                    <ul>
-                        <li><a href="/" className={`link-item ${path === "/" ? 'selected' : ''}`}>Accueil</a></li>
-                        <li><a href="/about" className={`link-item ${path === "/about" ? 'selected' : ''}`}>A Propos</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <Outlet />
-            </main>
+            <div className="header-content-container">
+                <div className="header-content-sub-container">
+                    <header>
+                        <img className="header__logo" src={kasaColorLogo} alt="Logo d'en-tête de Kasa"/>
+                        <nav className="header__navigation">
+                            <ul>
+                                <li><Link to="/" className={`link-item ${path === "/" ? 'selected' : ''}`}>Accueil</Link></li>
+                                <li><Link to="/about" className={`link-item ${path === "/about" ? 'selected' : ''}`}>A Propos</Link></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    <main>
+                        <Outlet />
+                    </main>
+                </div>
+            </div>
             <footer>
                 <img className="footer__logo" src={kasaWhiteLogo} alt="Logo de Kasa"/>
                 <div className="footer__copyright__container">

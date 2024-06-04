@@ -1,5 +1,4 @@
-﻿import '../styles/pages/AboutPage.scss'
-import BannerComponent from "../components/BannerComponent.tsx";
+﻿import BannerComponent from "../components/BannerComponent.tsx";
 import imageSource from "../assets/Image-source-2.png";
 import ExpanderComponent from "../components/ExpanderComponent.tsx";
 import {aboutList} from "../data/aboutData.tsx";

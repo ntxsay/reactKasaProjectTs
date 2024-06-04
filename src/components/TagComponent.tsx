@@ -1,5 +1,4 @@
-﻿import '../styles/components/TagComponent.scss'
-import React from "react";
+﻿import React from "react";
 
 interface TagProp {
     title: string

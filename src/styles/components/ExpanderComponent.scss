@@ -1,6 +1,4 @@
-﻿@import "src/styles/layouts/theme";
-
-// Conteneur de l'expander
+﻿// Conteneur de l'expander
 .expanderContainer {
   display: flex;
   flex-direction: column;
@@ -14,8 +12,11 @@
     align-items: center;
     justify-content: start;
     background: $main-primary-red-color;
+    
     padding: 10px 20px 10px 10px;
     margin: 0;
+    //largeur 100% - les paddings
+    width: calc(100% - 30px);
     border-radius: 5px;
 
     //Titre de l'en-tête
