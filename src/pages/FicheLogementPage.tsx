@@ -1,5 +1,5 @@
 ﻿import {useLocation} from "react-router-dom";
-import CarouselComponent, {ICarouselItem} from "../components/CarouselComponent.tsx";
+import CarouselComponent from "../components/CarouselComponent.tsx";
 import TagComponent from "../components/TagComponent.tsx";
 import RatingComponent from "../components/RatingComponent.tsx";
 import ExpanderComponent from "../components/ExpanderComponent.tsx";
@@ -8,18 +8,10 @@ const FicheLogementPage = () => {
     let countTag = 0, countEquipment = 0;
     const location = useLocation();
     const parentProp: IPropLogement  = location.state;
-    const carouselItems : ICarouselItem[] = [];
-    for (let i = 0; i < parentProp.logement.pictures.length; i++){
-        const imageUrl = parentProp.logement.pictures[i];
-        carouselItems.push({
-            caption: `Image n°${i + 1} de \u00AB ${parentProp.logement.title} \u00BB` ,
-            imageUrl: imageUrl
-        });
-    }
     
     return (
         <section className="page">
-            <CarouselComponent carouselId="item-carousel" items={carouselItems} selectedIndex={0} isReversible={true}/>
+            <CarouselComponent carouselId="item-carousel" imagesUrl={parentProp.logement.pictures} selectedIndex={0} isReversible={true}/>
             <div className="logement__data-grid__container">
                 <div className="logement__title-location-tags__container">
                     <h1 className="logement-title">{parentProp.logement.title}</h1>

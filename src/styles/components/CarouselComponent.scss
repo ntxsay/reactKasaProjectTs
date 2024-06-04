@@ -5,7 +5,7 @@
   margin: 0;
   overflow: hidden;
 
-  @media (max-width: $mobile-size-layout){
+  @media (max-width: $layout-size-480px){
     border-radius: 10px;
     height: 255px;
   }
@@ -17,16 +17,15 @@
     flex-direction: row;
     
     height: 100%;
-    width: fit-content;
+    width: 100%;
     
     .carouselContainer__imageContainer__image {
       object-fit: cover;
-      width: 0 ;
-      transition: width 0.3s ease-in-out;
+      width: 0;
+      max-width: 1240px;
 
       &.selected {
-        width: 1240px ;
-        transition: width 0.3s ease-in-out;
+        width: 100% ;
       }
     }
 
@@ -49,7 +48,7 @@
       &.--previousBtn {
         margin-left: 23px;
 
-        @media (max-width: $mobile-size-layout){
+        @media (max-width: $layout-size-390px){
           margin-left: 5px;
         }
       }
@@ -57,7 +56,7 @@
       &.--nextBtn {
         margin-right: 23px;
 
-        @media (max-width: $mobile-size-layout){
+        @media (max-width: $layout-size-390px){
           margin-right: 5px;
         }
       }
@@ -65,7 +64,7 @@
       img {
         height: 79px;
 
-        @media (max-width: $mobile-size-layout){
+        @media (max-width: $layout-size-390px){
           height: 19px;
         }
       }

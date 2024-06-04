@@ -10,6 +10,17 @@
 
   @media (max-width: $mobile-size-layout){
     height: 111px;
+  }
+
+  @media (max-width: $layout-size-480px){
+    height: 146px;
+  }
+  
+  @media (min-width: $layout-size-480px + 1) and (max-width: $layout-size-640px){
+    height: 199px;
+  }
+
+  @media (max-width: $layout-size-640px){
     border-radius: 10px;
   }
   
@@ -60,8 +71,8 @@
               -1px 1px black,
               5px 5px 5px rgba(0, 0, 0, 0.5); /* Ombre portée */
 
-      @media (max-width: $mobile-size-layout){
-        @include monserratFontElement($size: 24px);
+      @media (max-width: $layout-size-480px){
+        font-size: 24px !important;
         margin-left: 16px;
         text-shadow: none;
         display: flex;
@@ -70,7 +81,7 @@
         gap: 4px;
       }
 
-      @media (max-width: $layout-size-640px){
+      @media (min-width: $layout-size-480px + 1) and (max-width: $layout-size-640px){
         font-size: 36px !important;
       }
 

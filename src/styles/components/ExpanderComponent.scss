@@ -24,7 +24,7 @@
       @include monserratFontElement($size: 18px);
       text-align: start;
 
-      @media (max-width: $mobile-size-layout){
+      @media (max-width: $layout-size-390px){
         @include monserratFontElement($size: 13px);
       }
     }
@@ -43,7 +43,7 @@
         width: 24px;
         transition: transform 0.3s ease-in-out;
 
-        @media (max-width: $mobile-size-layout){
+        @media (max-width: $layout-size-390px){
           width: 16px;
         }
       }
@@ -68,6 +68,10 @@
     transition: opacity 0.5s ease, height 0.5s ease;
     @include monserratFontElement($size: 18px, $weight: 400, $color:$main-primary-black-color);
 
+    @media (max-width: $layout-size-768px){
+      @include monserratFontElement($size: 14px, $weight: 400, $color:$main-primary-black-color);
+    }
+    
     &.dellapse {
       opacity: 1;
       padding: 13px 20px 19px 20px;

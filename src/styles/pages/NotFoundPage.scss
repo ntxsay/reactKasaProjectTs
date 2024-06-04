@@ -10,8 +10,16 @@
     @include monserratFontElement($size: 288px, $color: $main-primary-red-color);
     margin: 0;
 
-    @media (max-width: $mobile-size-layout){
+    @media (max-width: $layout-size-390px){
       @include monserratFontElement($size: 96px, $color: $main-primary-red-color);
+    }
+
+    @media (min-width: $layout-size-390px + 1) and (max-width: $layout-size-575px){
+      @include monserratFontElement($size: 120px, $color: $main-primary-red-color);
+    }
+
+    @media (min-width: $layout-size-575px + 1) and (max-width: $layout-size-768px){
+      @include monserratFontElement($size: 150px, $color: $main-primary-red-color);
     }
   }
 
@@ -20,12 +28,16 @@
     margin: 0;
     text-align: center;
 
-    @media (max-width: $mobile-size-layout){
+    @media (max-width: $layout-size-390px){
       @include monserratFontElement($size: 18px, $color: $main-primary-red-color, $weight:500);
       max-width: 260px;
       display: flex;
       flex-direction: column;
       gap: 4px;
+    }
+
+    @media (min-width: $layout-size-390px + 1) and (max-width: $layout-size-1200px) {
+      @include monserratFontElement($size: 24px, $color: $main-primary-red-color, $weight:500);
     }
   }
 

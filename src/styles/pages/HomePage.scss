@@ -17,8 +17,8 @@
   row-gap: 50px;
   column-gap: 5%;
   margin-top: 43px;
-
-  @media (max-width: $mobile-size-layout){
+  
+  @media (max-width: $layout-size-575px){
     background: transparent;
     padding: 0;
     flex-direction: column;
@@ -26,23 +26,16 @@
     row-gap: 20px;
   }
 
-  @media (max-width: $layout-size-575px){
-    flex-direction: column;
-  }
-
-  @media (max-width: $layout-size-1024px){
-    padding: 56px 25px 43px 25px;
-  }
-
-  @media (max-width: $layout-size-960px) {
-    row-gap: 23px;
+  @media (min-width: $layout-size-575px + 1) and (max-width: $layout-size-1024px){
+    padding: 31px 25px 30px 25px;
+    row-gap: 35px;
   }
 
   a {
     width: 30%;
     aspect-ratio: 1/1;
     
-    @media (max-width: $layout-size-575px){
+    @media (max-width: $layout-size-880px){
       width: 100%;
       aspect-ratio: 4/3;
 
