@@ -5,7 +5,7 @@
   gap: 19px;
   align-items: center;
 
-  @media (max-width: $layout-size-390px){
+  @media (max-width: 768px){
     gap: 8px;
   }
   
@@ -18,12 +18,12 @@
       height: 25px;
       width: 25px;
 
-      @media (max-width: $layout-size-390px){
+      @media (max-width: 768px){
         height: 14px;
         width: 14px;
       }
 
-      @media (min-width: $layout-size-390px + 1) and (max-width: $layout-size-480px){
+      @media (min-width: 769px) and (max-width: 1024px){
         height: 20px;
         width: 20px;
       }

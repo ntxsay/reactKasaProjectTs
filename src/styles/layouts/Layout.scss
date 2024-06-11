@@ -24,21 +24,12 @@
   padding: 0 100px;
   max-width: 1240px;
   
-  
-  @media (max-width: $layout-size-960px){
+  @media (max-width: 768px){
     padding: 0 20px
   }
 
-  @media (min-width: $layout-size-960px + 1) and (max-width: $layout-size-1024px - 1){
+  @media (min-width: 769px) and (max-width: 1024px){
     padding: 0 40px
-  }
-
-  @media (min-width: $layout-size-960px + 1) and (max-width: $layout-size-1024px){
-    padding: 0 50px
-  }
-
-  @media (min-width: $layout-size-1200px + 1) and (max-width: $layout-size-1240px - 1){
-    padding: 0 70px
   }
 }
 
@@ -50,7 +41,7 @@ header {
   gap: 20px;
   margin: 45px 0;
 
-  @media (max-width: $layout-size-640px){
+  @media (max-width: 768px){
     margin: 20px 0;
   }
 
@@ -58,11 +49,11 @@ header {
   .header__logo {
     height: 68px;
 
-    @media (max-width: $layout-size-360px){
+    @media (max-width: 360px){
       height: 36px;
     }
     
-    @media (min-width: $layout-size-360px + 1) and (max-width: $layout-size-480px){
+    @media (min-width: 361px) and (max-width: 1024px){
       height: 46px;
     }
   }
@@ -77,28 +68,25 @@ header {
       flex-direction: row;
       gap: 57px;
 
-      @media (max-width: $layout-size-640px){
+      @media (max-width: 768px){
         gap: 26px;
       }
 
       .link-item {
-        @include monserratFontElement($color:black, $weight:500);
+        @include mainPrimaryFontElement($color:black, $weight:500);
         text-decoration: none;
 
-        @media (max-width: $layout-size-390px){
+        @media (max-width: 768px){
           font-size: 12px !important;
+          text-transform: uppercase;
         }
 
-        @media (min-width: $layout-size-390px + 1) and (max-width: $layout-size-480px){
+        @media (min-width: 769px) and (max-width: 1024px){
           font-size: 16px !important;
         }
         
-        @media (max-width: $layout-size-575px){
+        @media (max-width: 768px){
           font-size: 18px;
-        }
-
-        @media (max-width: $layout-size-960px){
-          text-transform: uppercase;
         }
         
         &.selected {
@@ -118,7 +106,7 @@ footer {
   gap: 55px;
   padding: 66px 0 29px 0;
 
-  @media (max-width: $mobile-size-layout){
+  @media (max-width: 768px){
     gap: 14px;
   }
   
@@ -131,12 +119,12 @@ footer {
     justify-content: center;
 
     .footer__copyright {
-      @include monserratFontElement($weight:500);
+      @include mainPrimaryFontElement($weight:500);
       text-align: center;
       margin: 0;
 
-      @media (max-width: $mobile-size-layout){
-        @include monserratFontElement($weight:500, $size:12px);
+      @media (max-width: 768px){
+        font-size: 12px;
         width: 103px;
       }
     }

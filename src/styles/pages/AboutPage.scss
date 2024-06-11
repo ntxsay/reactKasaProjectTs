@@ -1,7 +1,7 @@
 ﻿main {
   margin-bottom: 38px;
 
-  @media (max-width: $mobile-size-layout){
+  @media (max-width: 768px){
     margin-bottom: 19px;
   }
 }
@@ -12,19 +12,19 @@
   flex-direction: column;
   gap: 30px;
 
-  @media (max-width: $mobile-size-layout){
+  @media (max-width: 768px){
     margin: 19px 0 0 0;
     gap: 20px;
   }
 
-  @media (max-width: $layout-size-960px){
+  @media (min-width: 769px) and (max-width: 1024px){
     margin: 43px 0 0 0;
   }
   
   .expanderContainer__header__title {
     font-size: 24px !important;
 
-    @media (max-width: $mobile-size-layout){
+    @media (max-width: 768px){
       font-size: 13px !important;
     }
   }

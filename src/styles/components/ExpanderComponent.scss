@@ -21,11 +21,11 @@
 
     //Titre de l'en-tête
     .expanderContainer__header__title {
-      @include monserratFontElement($size: 18px);
+      @include mainPrimaryFontElement($size: 18px);
       text-align: start;
 
-      @media (max-width: $layout-size-390px){
-        @include monserratFontElement($size: 13px);
+      @media (max-width: 768px){
+        font-size: 13px !important;
       }
     }
 
@@ -43,19 +43,18 @@
         width: 24px;
         transition: transform 0.3s ease-in-out;
 
-        @media (max-width: $layout-size-390px){
+        @media (max-width: 768px){
           width: 16px;
         }
       }
       
       &.dellapse {
         img {
-          transform: rotate(180deg);
+          transform: rotate(-180deg);
           transition: transform 0.3s ease-in-out;
         }
       }
     }
-
   }
 
   //Conteneur du contenu de l'expander
@@ -66,10 +65,10 @@
     height: 0;
     overflow: hidden;
     transition: opacity 0.5s ease, height 0.5s ease;
-    @include monserratFontElement($size: 18px, $weight: 400, $color:$main-primary-black-color);
+    @include mainPrimaryFontElement($size: 18px, $weight: 400, $color:$main-primary-black-color);
 
-    @media (max-width: $layout-size-768px){
-      @include monserratFontElement($size: 14px, $weight: 400, $color:$main-primary-black-color);
+    @media (max-width: 768px){
+      font-size: 14px;
     }
     
     &.dellapse {

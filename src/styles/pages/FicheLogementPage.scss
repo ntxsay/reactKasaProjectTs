@@ -1,10 +1,20 @@
 ﻿main {
   margin-bottom: 50px;
 
-  @media (max-width: $mobile-size-layout){
+  @media (max-width: 768px) {
     margin-bottom: 27px;
   }
 }
+
+.logement__notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 139px;
+  padding: 94px 0 139px 0;
+}
+
 
 .logement__data-grid__container {
   display: grid;
@@ -12,7 +22,7 @@
   gap: 10px;
   margin-top: 24px;
 
-  @media (max-width: $layout-size-768px){
+  @media (max-width: 768px) {
     grid-template-columns: none;
   }
 
@@ -26,23 +36,23 @@
     .logement-title {
       margin: 0;
       overflow-wrap: break-word;
-      @include monserratFontElement($size: 36px, $weight: 500, $color:$main-primary-red-color);
+      @include mainPrimaryFontElement($size: 36px, $weight: 500, $color: $main-primary-red-color);
 
-      @media (max-width: $layout-size-390px){
-        @include monserratFontElement($size: 18px, $weight: 500, $color:$main-primary-red-color);
+      @media (max-width: 768px) {
+        font-size: 18px;
       }
 
-      @media (min-width: $layout-size-390px + 1) and (max-width: $layout-size-480px){
-        @include monserratFontElement($size: 24px, $weight: 500, $color:$main-primary-red-color);
+      @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 24px;
       }
     }
 
     .logement-location {
       margin: 0;
-      @include monserratFontElement($size: 18px, $weight: 500, $color:$main-primary-black-color);
+      @include mainPrimaryFontElement($size: 18px, $weight: 500, $color: $main-primary-black-color);
 
-      @media (max-width: $layout-size-390px){
-        @include monserratFontElement($size: 14px, $weight: 500, $color:$main-primary-black-color);
+      @media (max-width: 768px) {
+        font-size: 14px;
       }
     }
 
@@ -61,14 +71,14 @@
     justify-content: flex-start;
     align-items: flex-end;
     flex-direction: column;
-    gap:24px;
+    gap: 24px;
 
-    @media (max-width: $layout-size-768px){
+    @media (max-width: 768px) {
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
     }
-    
+
     .logement-host-container {
       display: flex;
       flex-direction: row;
@@ -77,33 +87,33 @@
       gap: 10px;
 
       .logement-host-name {
-        @include monserratFontElement($size: 18px, $weight: 500, $color:$main-primary-red-color);
+        @include mainPrimaryFontElement($size: 18px, $weight: 500, $color: $main-primary-red-color);
         max-width: 93px;
         text-align: end;
 
-        @media (max-width: $layout-size-390px){
-          @include monserratFontElement($size: 12px, $weight: 500, $color:$main-primary-red-color);
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+          font-size: 14px;
         }
       }
 
       .logement-host-picture {
         height: 64px;
         width: 64px;
-        border-radius: 34px ;
+        border-radius: 34px;
         background: $main-primary-gray-c4-color;
 
-        @media (max-width: $layout-size-390px){
+        @media (max-width: 768px) {
           height: 32px;
           width: 32px;
         }
       }
     }
-
   }
-
 }
-
-
 
 .logement-description-equipements-container {
   display: grid;
@@ -111,11 +121,11 @@
   gap: 76px;
   margin-top: 24px;
 
-  @media (max-width: $layout-size-768px){
+  @media (max-width: 768px) {
     grid-template-columns: none;
     gap: 20px;
   }
-  
+
   .logement-description-equipements-list {
     margin: 0;
     padding: 0;

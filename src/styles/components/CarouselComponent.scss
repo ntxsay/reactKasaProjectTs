@@ -5,7 +5,7 @@
   margin: 0;
   overflow: hidden;
 
-  @media (max-width: $layout-size-480px){
+  @media (max-width: 768px) {
     border-radius: 10px;
     height: 255px;
   }
@@ -15,22 +15,23 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    
+
     height: 100%;
     width: 100%;
-    
+
     .carouselContainer__imageContainer__image {
       object-fit: cover;
       width: 0;
       max-width: 1240px;
 
       &.selected {
-        width: 100% ;
+        width: 100%;
       }
     }
 
-    
+
   }
+
   .carouselContainer__navigationContainer {
     position: absolute;
     height: 100%;
@@ -39,16 +40,16 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
+
     .carouselContainer__navButton {
       border: none;
       background: transparent;
       cursor: pointer;
-      
+
       &.--previousBtn {
         margin-left: 23px;
 
-        @media (max-width: $layout-size-390px){
+        @media (max-width: 768px) {
           margin-left: 5px;
         }
       }
@@ -56,27 +57,31 @@
       &.--nextBtn {
         margin-right: 23px;
 
-        @media (max-width: $layout-size-390px){
+        @media (max-width: 768px) {
           margin-right: 5px;
         }
       }
-      
+
       img {
         height: 79px;
 
-        @media (max-width: $layout-size-390px){
+        @media (max-width: 768px) {
           height: 19px;
         }
       }
     }
   }
-  
+
   .carouselContainer__Caption {
     position: absolute;
     bottom: 25px;
     width: 100%;
     display: flex;
     justify-content: center;
-    @include monserratFontElement($size:18px, $weight:500, $color: $main-primary-white-color);
+    @include mainPrimaryFontElement($size: 18px, $weight: 500, $color: $main-primary-white-color);
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }

@@ -11,7 +11,9 @@ const Layout = () => {
             <div className="header-content-container">
                 <div className="header-content-sub-container">
                     <header>
-                        <img className="header__logo" src={kasaColorLogo} alt="Logo d'en-tête de Kasa"/>
+                        <div className="header__logo__container">
+                            <img className="header__logo" src={kasaColorLogo} alt="Logo d'en-tête de Kasa"/>
+                        </div>
                         <nav className="header__navigation">
                             <ul>
                                 <li><Link to="/" className={`link-item ${path === "/" ? 'selected' : ''}`}>Accueil</Link></li>

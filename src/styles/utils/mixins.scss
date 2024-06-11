@@ -1,4 +1,4 @@
-﻿@mixin monserratFontElement($size: 1.5em, $weight: 700, $color: $main-primary-white-color) {
+﻿@mixin mainPrimaryFontElement($size: 1.5em, $weight: 700, $color: $main-primary-white-color) {
   color: $color;
   font-size: $size;
   font-weight: $weight;

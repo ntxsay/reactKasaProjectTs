@@ -5,47 +5,44 @@
   align-items: center;
   gap: 139px;
   padding: 94px 0 139px 0;
+}
 
-  .page__error-code {
-    @include monserratFontElement($size: 288px, $color: $main-primary-red-color);
-    margin: 0;
+.page__error-code {
+  @include mainPrimaryFontElement($size: 288px, $color: $main-primary-red-color);
+  margin: 0;
 
-    @media (max-width: $layout-size-390px){
-      @include monserratFontElement($size: 96px, $color: $main-primary-red-color);
-    }
-
-    @media (min-width: $layout-size-390px + 1) and (max-width: $layout-size-575px){
-      @include monserratFontElement($size: 120px, $color: $main-primary-red-color);
-    }
-
-    @media (min-width: $layout-size-575px + 1) and (max-width: $layout-size-768px){
-      @include monserratFontElement($size: 150px, $color: $main-primary-red-color);
-    }
+  @media (max-width: 768px) {
+    font-size: 96px !important;
   }
 
-  .page__message {
-    @include monserratFontElement($size: 36px, $color: $main-primary-red-color, $weight:500);
-    margin: 0;
-    text-align: center;
-
-    @media (max-width: $layout-size-390px){
-      @include monserratFontElement($size: 18px, $color: $main-primary-red-color, $weight:500);
-      max-width: 260px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    @media (min-width: $layout-size-390px + 1) and (max-width: $layout-size-1200px) {
-      @include monserratFontElement($size: 24px, $color: $main-primary-red-color, $weight:500);
-    }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 150px !important;
   }
 
-  .page__return-link {
-    @include monserratFontElement($size: 18px, $color: $main-primary-black-color, $weight:500);
+}
 
-    @media (max-width: $mobile-size-layout){
-      @include monserratFontElement($size: 14px, $color: $main-primary-black-color, $weight:500);
-    }
+.page__error__message {
+  @include mainPrimaryFontElement($size: 36px, $color: $main-primary-red-color, $weight: 500);
+  margin: 0;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 18px !important;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 24px !important;
+  }
+}
+
+.page__error__return-link {
+  @include mainPrimaryFontElement($size: 18px, $color: $main-primary-black-color, $weight: 500);
+
+  @media (max-width: 768px) {
+    font-size: 14px !important;
   }
 }

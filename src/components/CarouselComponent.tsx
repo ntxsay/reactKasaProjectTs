@@ -35,7 +35,7 @@ const CarouselComponent : React.FC<CarouselProps> = (carouselProps) => {
         } else {
             setCaption(`1/${countImages}`)
         }
-    }, []);
+    }, carouselProps.imagesUrl);
 
     /**
      * Accède à l'image précédente
