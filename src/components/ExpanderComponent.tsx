@@ -10,7 +10,14 @@ interface ExpanderProps {
 
 const ExpanderComponent: React.FC<ExpanderProps> =  (props) => {
 
+    /**
+     * Obtient ou définit une valeur booléenne indiquant si l'expander est réduit ou pas
+     */
     const [isCollapsed, setIsCollapsed] = useState(props.isCollapsed);
+
+    /**
+     * Lorsque l'utilisateur clique sur le chevron, l'expander est réduit ou étendu
+     */
     const toggleCollapse = () => {
         setIsCollapsed(!isCollapsed);
     };
